@@ -21,7 +21,7 @@ echo "<![endif]-->";
  					jQuery('div.content').css('display', 'block');
  					
  					
- 					jQuery(".gallery-icon a").swipebox();
+ 					jQuery(".gallery-icon a, .wp-caption a").swipebox();
  		
  				// Initialize Minimal Galleriffic Gallery       				
  				jQuery('#thumbs').galleriffic({
