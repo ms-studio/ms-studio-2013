@@ -19,18 +19,33 @@ function custom_register_styles() {
 						null
 				); 
 				
+				wp_enqueue_style( 
+						'swipebox_css', 
+						get_stylesheet_directory_uri() . '/js/libs/swipebox/source/swipebox.css', // main.css
+						false, // dependencies
+						'1.2.1' // version
+				); 
+				
 				// remove some plugin CSS
 //	      wp_dequeue_style( 'mailchimpSF_main_css' );
 	      // src: http://c-sideprod.ch/?mcsf_action=main_css&#038;ver=3.6
 	      
 	      wp_enqueue_script( 
-	         // the MAIN JavaScript file 
 	         		'galleriffic', // handle
 	         		get_stylesheet_directory_uri() . '/galleriffic/js/jquery.galleriffic.min.js', // scripts.js
 	         		array('jquery'), // dependencies
 	         		null, // version
 	         		true // in_footer
 	         );
+	        
+	      wp_enqueue_script( 
+	         		'swipebox', // handle
+	         		get_stylesheet_directory_uri() . '/js/libs/swipebox/source/jquery.swipebox.min.js',
+	         		array('jquery'), // dependencies
+	         		'1.2.1', // version
+	         		true // in_footer
+	         ); 
+	         
 
 }
 add_action( 'wp_enqueue_scripts', 'custom_register_styles', 1 );

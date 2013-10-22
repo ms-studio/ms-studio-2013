@@ -19,6 +19,9 @@ echo "<![endif]-->";
  					// We only want these galleriffic styles applied when javascript is enabled
  					jQuery('div.navigation').css({'width' : '300px', 'float' : 'left'});
  					jQuery('div.content').css('display', 'block');
+ 					
+ 					
+ 					jQuery(".gallery-icon a").swipebox();
  		
  				// Initialize Minimal Galleriffic Gallery       				
  				jQuery('#thumbs').galleriffic({
