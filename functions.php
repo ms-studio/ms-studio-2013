@@ -59,6 +59,8 @@ function image_toolbox($size = thumbnail, $howmany = 1, $link = no, $list = no) 
 // sanitize the gallery style
 // see http://core.trac.wordpress.org/ticket/10734
 
+require_once('inc/wp-gallery-shortcode/wp-gallery-shortcode-override.php');
+
 //add_filter( 'use_default_gallery_style', '__return_false' );
 
 // http://wpengineer.com/1802/a-solution-for-the-wordpress-gallery/
