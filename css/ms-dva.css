@@ -855,7 +855,7 @@ footer.URL {
 	display: block;
 	border: 0px solid green;
 	float: left;
-	margin-bottom: 1em;
+	margin-bottom: 1em !important;
 }
 
 .gallery-caption {
