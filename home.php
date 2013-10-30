@@ -11,7 +11,7 @@ get_header(); ?>
 <section class="current-work triade triade-first clearfix">
 	<h1 class="miso-font">Recent Projects</h1>
 	<div class="triade-inside">
-  <?php query_posts($query_string . '&showposts=6&n3kr_type=featured');
+  <?php query_posts($query_string . '&showposts=9&n3kr_type=featured');
    if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <article <?php post_class('triade-item leftfloat') ?>>
