@@ -56,6 +56,13 @@ get_header(); ?>
 	      	</div><!-- slideshow-container -->
 	      </div><!-- gallery -->
       
+      	<div id="thumbs" class="right-block-inner">
+      			<ul class="thumbs noscript">
+      			 <?php 
+      			 image_toolbox('thumbnail',-1,'link','li');
+      			 ?>
+      			 </ul>
+      	 </div>
       
       <!-- End Minimal Gallery Html Containers -->
       <?php } else { ?>
@@ -78,13 +85,6 @@ get_header(); ?>
 		} elseif ( has_custom_type( 'slideshow' )  ) { ?>
 		<!-- continue Minimal Gallery Html Containers -->
 
-		    				<div id="thumbs" class="right-block-inner">
-			      				<ul class="thumbs noscript">
-			      				 <?php 
-			      				 image_toolbox('thumbnail',-1,'link','li');
-			      				 ?>
-			      				 </ul>
-		    				 </div>
 		<!-- End Minimal Gallery Html Containers -->
 		<?php } ?>
 		
@@ -111,9 +111,9 @@ get_header(); ?>
 		
 			<?php // the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 			
-			<nav class="miso-font">
-			  <div><?php previous_post_link('&larr; Previous: %link') ?></div>
-			  <div><?php next_post_link('&rarr; Next: %link') ?></div>
+			<nav class="miso-font prev-next">
+			  <div class="prev-next-link"><?php previous_post_link('&larr; Previous: %link') ?></div>
+			  <div class="prev-next-link"><?php next_post_link('&rarr; Next: %link') ?></div>
 			</nav>			
 
 			<?php comments_template(); ?>
