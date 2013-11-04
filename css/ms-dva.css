@@ -6,7 +6,8 @@
 	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-09-27b.css
 	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-09-28b.css
 	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-10-24.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-10-30.css */
+	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-10-30.css
+	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-10-30c.css */
 
 /* html5 boilerplate 
 v0.9 -August 10th, 2010 - Initial release
@@ -1317,8 +1318,38 @@ and (min-width : 1224px) {
 
 /* Large screens ----------- */
 @media only screen 
-and (min-width : 1824px) {
-/* Styles */
+and (min-width : 800px) {
+
+		.main-content h2 {
+			margin-left: -15%;
+			margin-bottom: 1em;
+			font-size: 180%;
+			width: 130%;
+		}
+		
+		.main-content h3 {
+			margin-left: -7%;
+			margin-bottom: 1em;
+			width: 114%;
+		}
+		
+		#main .gallery {
+			margin-left: -15%;
+			width: 130%;
+		}
+		
+		#main iframe {
+			margin-left: -15%;
+			width: 130% !important;
+			max-width: 130% !important;
+		}
+		
+		.main-content p img  {
+			margin-left: -7%;
+			width: 114%;
+			max-width: 114%;
+			margin-top: 0.3em;
+		}
 }
 
 /* iPhone 4 ----------- */

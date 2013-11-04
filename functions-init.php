@@ -7,7 +7,7 @@ function custom_register_styles() {
 				// the MAIN stylesheet
 				wp_enqueue_style( 
 						'main_css_style', 
-						get_stylesheet_directory_uri() . '/css/ms-dva.min-2013-10-30c.css', // main.css
+						get_stylesheet_directory_uri() . '/css/ms-dva.min-2013-11-04.css', // main.css
 						false, // dependencies
 						null // version
 				); 
