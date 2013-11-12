@@ -11,6 +11,10 @@ if ( is_page( '2646' )  ) {
 
 	include( TEMPLATEPATH . '/inc/automattic/to-automattic.php' );
 
+} else if ( is_page( '3492' )  ) { 
+
+	include( TEMPLATEPATH . '/inc/automattic/to-mailpoet.php' );
+
 } else { 
 
 	include( TEMPLATEPATH . '/single.php' );
