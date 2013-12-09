@@ -1,5 +1,6 @@
 /* @override
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-12-09.css 
+	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-12-09.css
+	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-12-09x.css 
 
 	
 	
@@ -1367,7 +1368,13 @@ and (min-width : 768px) {
 and (min-width : 800px) {
 		
 		.mainframe .main-title,		
-		.main-content h2 {
+		.main-content h2,
+		.page-listing .superwide  {
+			margin-left: -15%;
+			width: 130%;
+		}
+		
+		.page-listing .superwide {
 			margin-left: -15%;
 			width: 130%;
 		}
@@ -1445,11 +1452,24 @@ and (min-width : 1000px) {
 			margin-left: -15%;
 			width: 130%;
 		}
+		
+		.page-listing .main-title,
+		.page-listing .superwide {
+			margin-left: -20%;
+			width: 140%;
+		}
 }
 
 @media only screen 
 and (min-width : 1260px) {
+		
 		h1 { font-size: 310%; } 
+		
+		.page-listing .main-title,
+		.page-listing .superwide {
+			margin-left: -40%;
+			width: 190%;
+		}
 }
 
 /* iPhone 4 ----------- */
