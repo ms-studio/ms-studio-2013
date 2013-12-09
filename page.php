@@ -29,7 +29,11 @@ document.write('<a class="kontakt" href="mailto'+semicolon+name1+name2+arobase+d
    </div>
   
   </article>
-  <?php endwhile; endif; ?>
+  <?php endwhile; endif; 
+  
+  // include( TEMPLATEPATH . '/inc/newsfeed.php' );	
+  
+  ?>
 
 </div>
 

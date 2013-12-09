@@ -1,13 +1,9 @@
-/* @override 
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-*.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-09-16a.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-09-27.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-09-27b.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-09-28b.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-10-24.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-10-30.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-10-30c.css */
+/* @override
+	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-12-09.css 
+
+	
+	
+	 */
 
 /* html5 boilerplate 
 v0.9 -August 10th, 2010 - Initial release
@@ -514,6 +510,11 @@ h3 a
 .wp-caption {
 	max-width: 100%;
 }
+div.wp-caption.alignnone{
+	width: 100% !important;
+	/* override element width*/
+}
+
 .wp-caption a {
 /*	width: 100%;*/
 }
@@ -607,6 +608,12 @@ transition: all 0.3s ease;
 .main-content a:hover img.framed {
 	background-color: #bbb;
 	border-color: #444;
+}
+
+.main-content p img.alignleft {
+	padding: 4px;
+	margin-right: 0.7em;
+	float: left;
 }
 
 .wp-caption img {
@@ -880,15 +887,25 @@ footer.URL {
 	padding: 4px;
 	margin: 4px;
 	border: 2px solid #aaa;
-	width: auto !important;
+	width: auto !important;	
 }
 
 .gallery-item:hover {
 	border-color: #777;
 }
 
+
 .gallery-item img {
 	display: block;
+	-webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-item:hover img {
+	opacity: 0.5;
 }
 
 ul.thumbs li{
@@ -1147,6 +1164,11 @@ div.commentmeta {visibility:hidden;}
 
 /* @end */
 
+div.wpcf7 img.ajax-loader {
+	width: 16px;
+	height: 16px;
+}
+
 
 /* @group Special Content */
 /* ------------------------------------------------------------------- */
@@ -1180,9 +1202,28 @@ div.script {
 	border: 0px dashed green;
 }
 
-#main-footer {
-	border: 0px solid red;
+/* @group Footer */
+
+.main-footer {
+	padding: 0 25px;	
+	margin-top: 2em;
 }
+
+.footer-inside {
+	border-top: 2px solid #d0d0d0;
+	border-bottom: 2px solid #d0d0d0;
+	padding: 0.4em 0em;
+	color: #a0a0a0;
+}
+
+.footer-inside a {
+	color: #c06767;
+}
+.footer-inside a:hover {
+	color: #b31717;
+}
+
+/* @end */
 
 /* @group Media Queries */
 /* ------------------------------------------------------------------- */
@@ -1219,7 +1260,15 @@ and (min-width : 400px) {
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (min-width : 600px) {
-		/* Styles */
+		
+		h1 { font-size: 240%; } 
+		
+		h1.main-title {
+			line-height: 1.2;
+		}
+		
+		#main { font-size: 96%; }
+		
 		.triade-item,
 		.list-item {
 			width: 42%;	
@@ -1243,17 +1292,20 @@ and (min-width : 600px) {
 			margin-right: auto;
 		}	
 		
+		.main-footer {
+			padding: 0 15px;	
+		}
+		
 		.zentr {
 		max-width: 40em;
 		}
 		
-			
 		.list-item:nth-child(odd) {
 			clear: left;
 			 /* use jQuery workaround for IE */
 		}
-		h1 { font-size: 310%; } 
-		#main { font-size: 96%; }
+		
+		
 }
 
 
@@ -1310,21 +1362,19 @@ and (min-width : 768px) {
 
 }
 
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
-}
-
 /* Large screens ----------- */
 @media only screen 
 and (min-width : 800px) {
-
+		
+		.mainframe .main-title,		
 		.main-content h2 {
 			margin-left: -15%;
-			margin-bottom: 1em;
-			font-size: 180%;
 			width: 130%;
+		}
+		
+		.main-content h2 {
+			font-size: 180%;
+			margin-bottom: 1em;
 		}
 		
 		.main-content h3 {
@@ -1334,8 +1384,8 @@ and (min-width : 800px) {
 		}
 		
 		#main .gallery {
-			margin-left: -15%;
-			width: 130%;
+			margin-left: -7%;
+			width: 114%;
 		}
 		
 		#main iframe {
@@ -1344,12 +1394,62 @@ and (min-width : 800px) {
 			max-width: 130% !important;
 		}
 		
-		.main-content p img  {
+		.alignnone img,
+		.alignnone .wp-caption-text,
+		.single-large-image,
+		.main-content p img.alignnone  {
 			margin-left: -7%;
 			width: 114%;
 			max-width: 114%;
 			margin-top: 0.3em;
 		}
+		
+		.alignnone .wp-caption-text {
+			margin-top: 0.7em;
+		}
+		
+		.main-footer {
+			padding: 0 15px;	
+			margin-left: -7%;
+			width: 114%;
+		}
+		
+		.footer-inside {
+			padding: 0.8em 6%;
+		}
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1000px) {
+		
+		h1 { font-size: 280%; } 
+		
+		.single-large-image {
+			margin-left: -20%;
+			width: 140%;
+			max-width: 140%;
+/*			display: block;*/
+		}
+		
+		.alignnone img,
+		.alignnone .wp-caption-text,
+		.single-large-image,
+		.main-content p img.alignnone  {
+			margin-left: -15%;
+			width: 130%;
+			max-width: 130%;
+		}
+		
+		#main .gallery {
+			margin-left: -15%;
+			width: 130%;
+		}
+}
+
+@media only screen 
+and (min-width : 1260px) {
+		h1 { font-size: 310%; } 
 }
 
 /* iPhone 4 ----------- */

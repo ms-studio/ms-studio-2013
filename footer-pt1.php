@@ -5,12 +5,14 @@
  */
 ?>
 
-  <footer id="main-footer">
-      <p class="hidden">
-        <a href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a>
-        and <a href="<?php bloginfo('comments_rss2_url'); ?>">Comments (RSS)</a>.
-        <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
+  <footer id="main-footer" class="main-footer">
+  	<div class="footer-inside">
+      <p class="footer-content">
+      	Powered by WordPress — Theme: ms2103 (<a href="https://github.com/ms-studio/ms-studio">on Gitub</a>) —
+        <a href="<?php bloginfo('rss2_url'); ?>">RSS feed</a>
+        <!-- <?php // echo get_num_queries(); ?> queries. <?php // timer_stop(1); ?> seconds. -->
       </p>
+      </div>
   </footer>
 </div> <!--! end of #container -->
 

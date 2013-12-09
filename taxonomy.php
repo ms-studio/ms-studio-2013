@@ -80,6 +80,6 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 </div>
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>

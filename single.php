@@ -25,6 +25,26 @@ get_header(); ?>
       
       <?php // check if we are Main-content or Sub-content
       if ( has_custom_type( 'single-large-image' ) ) {
+      
+      		if ( has_post_thumbnail() ) { 
+      		
+      			?>
+      			<div class="header-imagery single-large-image full-block clearfix">
+      				      	<div class="greyframe">
+      			<?php
+      		  the_post_thumbnail('large');
+      		  
+      		  ?></div>
+      		  </div>
+      		  
+      		  </header>
+      		  
+      		  <div class="full-block clearfix">
+      		  	<div class="main-content lib-serif left-block">
+      		  <?php
+      		   
+      		} else {
+      
       	 // echo('single-large-image');
       	 ?>
       	<div class="header-imagery single-large-image full-block clearfix">
@@ -41,6 +61,9 @@ get_header(); ?>
       		<div class="main-content lib-serif left-block">
       				
       	<?php // remove has_post_thumbnail() condition...
+
+      	} 
+      	
       } elseif ( has_custom_type( 'slideshow' )  ) { ?>
       <!-- Start Minimal Gallery Html Containers -->
       
