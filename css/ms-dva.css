@@ -1224,6 +1224,10 @@ div.script {
 	color: #b31717;
 }
 
+img#wpstats {
+	visibility: hidden;
+}
+
 /* @end */
 
 /* @group Media Queries */
