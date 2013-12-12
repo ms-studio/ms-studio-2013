@@ -23,6 +23,8 @@ echo "<![endif]-->";
  					jQuery('div.navigation').css({'width' : '300px', 'float' : 'left'});
  					jQuery('div.content').css('display', 'block');
  					
+ 					// allow Swipebox for single images
+ 					jQuery("a>img.alignnone").parent().addClass("swipe");				
  					
  					jQuery(".gallery-icon a, .wp-caption a, a.swipe").swipebox();
  		
