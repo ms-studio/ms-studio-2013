@@ -43,6 +43,8 @@
   <?php // ** SEO OPTIMIZATION v.0.1 **
   if ( is_attachment() ) {
   ?><meta name="robots" content="noindex,follow" /><?php
+  } else if (is_page_template( 'page-custom.php' )) {
+  ?><meta name="robots" content="noindex,follow" /><?php
   } else if( is_single() || is_page() || is_home() ) { 
 	?><meta name="robots" content="all,index,follow" /><?php 
 	} elseif ( is_category() || is_archive() ) { 

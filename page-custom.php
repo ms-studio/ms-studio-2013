@@ -13,7 +13,7 @@ if ( is_page( '2646' )  ) {
 
 } else if ( is_page( '3492' )  ) { 
 
-	include( TEMPLATEPATH . '/inc/automattic/to-mailpoet.php' );
+	include( TEMPLATEPATH . '/inc/automattic/work-with-me.php' );
 
 } else { 
 
