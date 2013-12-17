@@ -26,14 +26,33 @@ get_header(); ?>
     <h2 class="main-title miso-font">Author Archive</h2>
     <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
     <h2 class="pagetitle">Blog Archives</h2>
-    <?php } ?>
-
-    <nav>
-      <div><?php next_posts_link('&laquo; Older Entries') ?></div>
-      <div><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-    </nav>
-
-    <?php while (have_posts()) : the_post(); ?>
+    <?php } 
+    
+    
+    global $wp_rewrite;			
+    $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+    
+    $pagination = array(
+    	'base' => @add_query_arg('page','%#%'),
+    	'format' => '',
+    	'total' => $wp_query->max_num_pages,
+    	'current' => $current,
+    	'show_all' => true,
+    	'type' => 'plain',
+    	);
+    
+    if( $wp_rewrite->using_permalinks() )
+    	$pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg('s',get_pagenum_link(1) ) ) . 'page/%#%/', 'paged');
+    
+    if( !empty($wp_query->query_vars['s']) )
+    	$pagination['add_args'] = array('s'=>get_query_var('s'));
+    
+    
+    echo '<div class="pagination pagination-top clear">'. paginate_links($pagination) .'</div>'; 
+    
+    
+    
+     while (have_posts()) : the_post(); ?>
     <article <?php post_class() ?>>
       <header>
         <h3 class="post-title miso-font" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>" class="trueblack"><?php the_title(); ?></a></h3>
@@ -41,15 +60,18 @@ get_header(); ?>
       </header>
       <?php //the_content() ?>
       <footer class="lib-serif">
-        <?php the_tags('Tags: ', ', ', '<br />'); ?>
+        <div class="arch-post-meta">Category: <?php the_category(' / ') ?></div>
+        <div class="arch-post-meta"><?php the_tags('Tags: ', ' / ', '<br />'); ?></div>
       </footer>
     </article>
     <?php endwhile; ?>
-
-    <nav>
-      <div><?php next_posts_link('&laquo; Older Entries') ?></div>
-      <div><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-    </nav>
+		
+    <?php 
+    
+    echo '<div class="pagination pagination-bottom clear">'. paginate_links($pagination) .'</div>';
+    
+     ?>
+    
   </section>
 
   <?php else :

@@ -1,6 +1,7 @@
 /* @override
 	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-12-09.css
-	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-12-09x.css 
+	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-12-09x.css
+	http://ms-studio.net/wp-content/themes/ms-2013/css/ms-dva.min-2013-12-11.css 
 
 	
 	
@@ -837,6 +838,25 @@ footer.URL {
 		margin-top: 15px;
 		margin-bottom: 2px;
 	}
+	
+	.archive h3 {
+		font-size: 140%
+	}
+	
+	.archive .pagination {
+		width: 100%;
+		
+	}
+	
+	.pagination-top {
+		margin-bottom: 1.5em;
+		float: left;
+	}
+	
+	.pagination-bottom {
+		margin-top: 1.5em;
+	}
+	
 /* @end */
 
 /* @group single-large-image */
