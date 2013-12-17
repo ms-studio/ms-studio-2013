@@ -13,10 +13,11 @@ get_header(); ?>
 
   <article <?php post_class('mainframe') ?> id="post-<?php the_ID(); ?>">
   
-	  <footer class="meta-inform zero miso-font link-u">
+	  <footer class="meta-inform zero miso-font">
 		  <ul>
 			<li>Published <time datetime="<?php the_time('Y-m-d'); ?>" class="updated"><?php the_time('F jS, Y') ?></time></li>
 			<li>Filed under <?php the_category(' / ') ?></li>
+			<?php the_tags('<li>Tags: ', ' / ', '</li>'); ?>
 		  </ul>
 	  </footer>
 	  
@@ -64,31 +65,7 @@ get_header(); ?>
 
       	} 
       	
-      } elseif ( has_custom_type( 'slideshow' )  ) { ?>
-      <!-- Start Minimal Gallery Html Containers -->
-      
-      </header>
-      
-      <div class="full-block clearfix">
-      	<div class="main-content lib-serif left-block">
-      
-	      <div id="gallery" class="">
-	      	<div class="slideshow-container">
-	      		<div id="loading" class="loader"></div>
-	      		<div id="slideshow" class="slideshow"></div>
-	      	</div><!-- slideshow-container -->
-	      </div><!-- gallery -->
-      
-      	<div id="thumbs" class="right-block-inner">
-      			<ul class="thumbs noscript">
-      			 <?php 
-      			 image_toolbox('thumbnail',-1,'link','li');
-      			 ?>
-      			 </ul>
-      	 </div>
-      
-      <!-- End Minimal Gallery Html Containers -->
-      <?php } else { ?>
+      } else { ?>
       
       </header>
       
