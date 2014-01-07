@@ -6,9 +6,9 @@
 
 get_header(); ?>
 
-<div id="main" role="main" class="mainframe">
+<div id="main" role="main" class="mainframe page-listing">
 
-<section class="current-work triade triade-first clearfix">
+<section class="current-work triade triade-first clearfix superwide">
 	<h1 class="miso-font">Recent Projects</h1>
 	<div class="triade-inside">
   <?php query_posts($query_string . '&showposts=9&n3kr_type=featured');
@@ -45,8 +45,7 @@ get_header(); ?>
     </div>
  </section>
  
- 
- <section class="current-work triade clearfix">
+<section class="current-work triade clearfix superwide">
  	<section <?php post_class('triade-item leftfloat') ?>>
  	<h1 class="miso-font h3link h3grey">News: Projects</h1>
  	<ul class="lib-serif link-list">

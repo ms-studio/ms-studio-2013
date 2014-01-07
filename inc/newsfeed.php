@@ -4,7 +4,7 @@
  * @subpackage ms-dva
  */
 ?>
-<section class="current-work triade clearfix">
+<section class="current-work triade clearfix superwide">
 	<section <?php post_class('triade-item leftfloat') ?>>
 	<h1 class="miso-font h3link h3grey">News: Projects</h1>
 	<ul class="lib-serif link-list">
