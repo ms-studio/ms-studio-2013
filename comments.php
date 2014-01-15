@@ -27,7 +27,21 @@
   </nav>
 
   <ol class="commentlist lib-serif">
-  <?php wp_list_comments('callback=mytheme_comment'); 
+  <?php 
+  
+  		 wp_list_comments('callback=mytheme_comment'); 
+  		
+  		// from Underscores
+//  		wp_list_comments('callback=_s_comment'); 
+
+			// from Twentythirteen:
+			
+//			wp_list_comments( array(
+//				'style'       => 'ol',
+//				'short_ping'  => true,
+//				'avatar_size' => 74,
+//			) );
+  		
   
   // was: type=comment&callback=mytheme_comment
   // note: we could display the pingbacks in some way....

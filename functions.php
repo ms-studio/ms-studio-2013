@@ -198,7 +198,16 @@ function mytheme_comment($comment, $args, $depth) {
    <li>
      <article <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
        <header class="comment-author vcard">
-          <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
+          <?php 
+           
+           // broken: echo get_avatar($comment,$size='48',$default='<path_to_url>' );
+           // get avatar
+           
+           echo get_avatar($comment,96);
+           
+//          if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); }  
+          
+          ?>
           <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
           <time><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a></time>
           <?php edit_comment_link(__('(Edit)'),'  ','') ?>
@@ -217,6 +226,11 @@ function mytheme_comment($comment, $args, $depth) {
     <!-- </li> is added by wordpress automatically -->
 <?php
 }
+
+
+
+
+
 
 automatic_feed_links();
 
