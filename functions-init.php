@@ -7,7 +7,7 @@ function custom_register_styles() {
 				// the MAIN stylesheet
 				wp_enqueue_style( 
 						'main_css_style', 
-						get_stylesheet_directory_uri() . '/css/ms-dva.min-2014-01-zbigniew.css', // main.css
+						get_stylesheet_directory_uri() . '/css/ms-dva.2014-01-31-min.css', // main.css
 						false, // dependencies
 						null // version
 				); 
@@ -87,17 +87,17 @@ add_action( 'init', 'build_taxonomies', 0 );
 function build_taxonomies() {
 
 $labels = array(
-    'name' => _x( 'Content types', 'taxonomy general name' ),
-    'singular_name' => _x( 'Content type', 'taxonomy singular name' ),
+    'name' => _x( 'Settings', 'taxonomy general name' ),
+    'singular_name' => _x( 'Setting', 'taxonomy singular name' ),
     'search_items' =>  __( 'Search' ),
-    'all_items' => __( 'All types' ),
+    'all_items' => __( 'All settings' ),
     'parent_item' => __( 'Parent' ),
     'parent_item_colon' => __( 'Parents:' ),
     'edit_item' => __( 'Edit' ), 
     'update_item' => __( 'Update' ),
     'add_new_item' => __( 'Add new' ),
     'new_item_name' => __( 'New type' ),
-    'menu_name' => __( 'Content types' ),
+    'menu_name' => __( 'Settings' ),
   ); 	
 
     register_taxonomy(
