@@ -19,6 +19,7 @@ echo "<![endif]-->";
 <script type="text/javascript">
  			
  			jQuery(document).ready(function() {				
+ 					
  					// We only want these galleriffic styles applied when javascript is enabled
  					jQuery('div.navigation').css({'width' : '300px', 'float' : 'left'});
  					jQuery('div.content').css('display', 'block');
@@ -40,14 +41,7 @@ echo "<![endif]-->";
  								}
  					  	}
  					 )
- 					
- 		
- 				// Initialize Minimal Galleriffic Gallery       				
-// 				jQuery('#thumbs').galleriffic({
-// 					imageContainerSel:      '#slideshow',
-// 					controlsContainerSel:   '#controls'
-// 				});
- 					// NOTE: buggy Galleriffic function, no JS will work after this.
+ 				
  			});
  			       	
 </script>
