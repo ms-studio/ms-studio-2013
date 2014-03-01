@@ -75,7 +75,17 @@
 
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-  <?php wp_head(); ?>
+  <?php wp_head(); 
+  
+  // add contact-form-7 CSS if we are on the contact page
+  
+  if (is_page( 123 ) ) {
+  
+  	echo "<link rel='stylesheet' id='contact-form-7-css' href='". plugins_url() . "/contact-form-7/includes/css/styles.css?ver=" .$wp_version. "' type='text/css' media='all' />";
+  		
+  }
+  
+  ?>
     
 </head>
 

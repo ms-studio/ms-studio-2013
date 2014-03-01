@@ -26,17 +26,26 @@ function custom_register_styles() {
 						'1.2.1' // version
 				); 
 				
+				wp_dequeue_script( 'devicepx' ); 
+				// some Jetpack stuff - 
+				// "That file is used to optionally load retina/HiDPI versions of files (Gravatars etc) which are known to support it, for devices that run at a higher resolution."
+				// info: http://wordpress.org/support/topic/plugin-jetpack-by-wordpresscom-unnecessary-java-script-call
+				
 				// remove some plugin CSS
 //	      wp_dequeue_style( 'mailchimpSF_main_css' );
 	      // src: http://c-sideprod.ch/?mcsf_action=main_css&#038;ver=3.6
 	      
-	      wp_enqueue_script( 
-	         		'galleriffic', // handle
-	         		get_stylesheet_directory_uri() . '/galleriffic/js/jquery.galleriffic.min.js', // scripts.js
-	         		array('jquery'), // dependencies
-	         		null, // version
-	         		true // in_footer
-	         );
+	      wp_dequeue_style( 'contact-form-7' );
+//	      // and load it manually on the required page.
+//	      wp_enqueue_style( 
+//	         		'contact-form-7', // handle
+//	         		plugins_url() . '/contact-form-7/includes/css/styles.css',
+//	         		false, // dependencies
+//	         		false, // WP version number
+//	         		true // in_footer
+//	         );
+	      
+	      // http://ms-studio.net/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.7.2'
 	        
 	      wp_enqueue_script( 
 	         		'swipebox', // handle
@@ -79,26 +88,29 @@ if ( function_exists( 'register_nav_menus' ) ) {
 			);
 }
 
+add_post_type_support( 'page', 'excerpt');
+
 // custom taxonomies
+// *********************
 // source: http://net.tutsplus.com/?p=11658
 // et http://codex.wordpress.org/Function_Reference/register_taxonomy
 add_action( 'init', 'build_taxonomies', 0 );
 
 function build_taxonomies() {
 
-$labels = array(
-    'name' => _x( 'Settings', 'taxonomy general name' ),
-    'singular_name' => _x( 'Setting', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search' ),
-    'all_items' => __( 'All settings' ),
-    'parent_item' => __( 'Parent' ),
-    'parent_item_colon' => __( 'Parents:' ),
-    'edit_item' => __( 'Edit' ), 
-    'update_item' => __( 'Update' ),
-    'add_new_item' => __( 'Add new' ),
-    'new_item_name' => __( 'New type' ),
-    'menu_name' => __( 'Settings' ),
-  ); 	
+		$labels = array(
+		    'name' => _x( 'Settings', 'taxonomy general name' ),
+		    'singular_name' => _x( 'Setting', 'taxonomy singular name' ),
+		    'search_items' =>  __( 'Search' ),
+		    'all_items' => __( 'All settings' ),
+		    'parent_item' => __( 'Parent' ),
+		    'parent_item_colon' => __( 'Parents:' ),
+		    'edit_item' => __( 'Edit' ), 
+		    'update_item' => __( 'Update' ),
+		    'add_new_item' => __( 'Add new' ),
+		    'new_item_name' => __( 'New type' ),
+		    'menu_name' => __( 'Settings' ),
+		  ); 	
 
     register_taxonomy(
 	'n3kr_type',
@@ -108,7 +120,7 @@ $labels = array(
 		'labels' => $labels,
 		'query_var' => true,
 		'rewrite' => true
-	)
-);
+			)
+		);
 }
 
