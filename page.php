@@ -27,6 +27,10 @@ document.write('<a class="kontakt" href="mailto'+semicolon+name1+name2+arobase+d
   		  </div>
 
    </div>
+   
+   <?php 
+   // include( TEMPLATEPATH . '/inc/newsfeed.php' );	
+   ?>
   
   </article>
   <?php endwhile; endif; 

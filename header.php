@@ -87,6 +87,17 @@
   
   ?>
     
+    <script>
+    var _prum = [['id', '537b26a1abe53dfb69b93f49'],
+                 ['mark', 'firstbyte', (new Date()).getTime()]];
+    (function() {
+        var s = document.getElementsByTagName('script')[0]
+          , p = document.createElement('script');
+        p.async = 'async';
+        p.src = '//rum-static.pingdom.net/prum.min.js';
+        s.parentNode.insertBefore(p, s);
+    })();
+    </script>
 </head>
 
 <body <?php body_class('no-js'); ?>>
