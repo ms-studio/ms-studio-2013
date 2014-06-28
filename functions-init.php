@@ -1,28 +1,41 @@
 <?php
 
+ // Change-Detector-XXXXXX - for Espresso.app
 
 /* Allow Automatic Updates
  ******************************
  * http://codex.wordpress.org/Configuring_Automatic_Background_Updates
  */
+ 
 
 add_filter( 'auto_update_plugin', '__return_true' );
 add_filter( 'auto_update_theme', '__return_true' );
 add_filter( 'allow_major_auto_core_updates', '__return_true' );
 
 
-
-
 function custom_register_styles() {
-	
-//				wp_dequeue_style( 'thematic_style' );
-				// the MAIN stylesheet
-				wp_enqueue_style( 
-						'main_css_style', 
-						get_stylesheet_directory_uri() . '/css/ms-dva.2014-01-31-min.css', // main.css
-						false, // dependencies
-						null // version
-				); 
+					
+					if ( WP_DEBUG == true ) {
+					
+							// DEV: the MAIN stylesheet - uncompressed
+							wp_enqueue_style( 
+									'main_css_style', 
+									get_stylesheet_directory_uri() . '/css/dev/00-main.css', // main.css
+									false, // dependencies
+									null // version
+							); 
+					
+					} else {
+					
+							// PROD: the MAIN stylesheet - combined and minified
+							wp_enqueue_style( 
+									'main_css_style', 
+									get_stylesheet_directory_uri() . '/css/build/styles.20140629002907.css', // main.css
+									false, // dependencies
+									null // version
+							); 
+					}
+					
 				
 				wp_enqueue_style( 
 						'webink_css', 
@@ -31,12 +44,6 @@ function custom_register_styles() {
 						null
 				); 
 				
-				wp_enqueue_style( 
-						'swipebox_css', 
-						get_stylesheet_directory_uri() . '/js/libs/swipebox/source/swipebox.css', // main.css
-						false, // dependencies
-						'1.2.1' // version
-				); 
 				
 				wp_dequeue_script( 'devicepx' ); 
 				// some Jetpack stuff - 
@@ -61,7 +68,7 @@ function custom_register_styles() {
 	        
 	      wp_enqueue_script( 
 	         		'swipebox', // handle
-	         		get_stylesheet_directory_uri() . '/js/libs/swipebox/source/jquery.swipebox.min.js',
+	         		get_stylesheet_directory_uri() . '/js/libs/swipebox/src/js/jquery.swipebox.min.js',
 	         		array('jquery'), // dependencies
 	         		'1.2.1', // version
 	         		true // in_footer

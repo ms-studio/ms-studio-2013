@@ -168,6 +168,7 @@ and (min-width : 800px) {
 			margin-left: -15%;
 			width: 130% !important;
 			max-width: 130% !important;
+/*			min-height: 400px;*/
 		}
 		
 		.alignnone img,

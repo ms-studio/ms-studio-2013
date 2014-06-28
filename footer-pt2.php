@@ -25,7 +25,7 @@ echo "<![endif]-->";
  					jQuery('div.content').css('display', 'block');
  					
  					// allow Swipebox for single images
- 					jQuery("a>img.alignnone, a>img.aligncenter").parent().addClass("swipe");	
+ 					jQuery("a>img.size-medium, a>img.alignnone, a>img.aligncenter").parent().addClass("swipe");	
  					
  					jQuery(".gallery-icon a, .wp-caption a, a.swipe").swipebox();
  					
