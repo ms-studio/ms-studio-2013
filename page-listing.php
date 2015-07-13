@@ -59,7 +59,9 @@ get_header(); ?>
   					<?php $key="Format"; echo get_post_meta($post->ID, $key, true); ?>
   					
   					<?php if ( get_post_meta($post->ID, 'URL', true) ) : ?>
-  					    <footer class="URL">Site en ligne: <a href="<?php echo get_post_meta($post->ID, 'URL', true) ?>" target="_blank"><?php echo get_post_meta($post->ID, 'URL', true) ?></a></footer>
+  					
+  					    <footer class="URL"><a href="<?php echo get_post_meta($post->ID, 'URL', true) ?>" target="_blank"><?php echo get_post_meta($post->ID, 'URL', true) ?></a></footer>
+  					
   					<?php endif; ?>
   					
   					<?php if ( get_post_meta($post->ID, 'ISBN', true) ) : ?>

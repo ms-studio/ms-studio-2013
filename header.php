@@ -69,7 +69,7 @@
   .wf-loading .miso-font {visibility: hidden;}
   </style>
 
-  <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/modernizr-1.5.min.js") ?> 
+  <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/mylibs/modernizr.custom.74299.js") ?> 
   <!-- NOTE: causes the fonts to re-load (double FOUT)
   -->
 

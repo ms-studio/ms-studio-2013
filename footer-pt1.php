@@ -11,6 +11,17 @@
       	Powered by WordPress — Theme: ms2103 (<a href="https://github.com/ms-studio/ms-studio">on Github</a>) —
         <a href="<?php bloginfo('rss2_url'); ?>">RSS feed</a>
         <!-- <?php // echo get_num_queries(); ?> queries. <?php // timer_stop(1); ?> seconds. -->
+        <?php 
+        
+        
+        // Test page: output if admin
+        
+//        if ( is_user_logged_in() ) {
+//        	get_template_part( 'inc/temp' );
+//        }
+        
+        
+         ?>
       </p>
       </div>
   </footer>

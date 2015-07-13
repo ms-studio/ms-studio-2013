@@ -1,6 +1,6 @@
 <?php
 
- // Change-Detector-XXXXXX - for Espresso.app
+ // Change-Detector-XXXXXXXXXX - for Espresso.app
 
 /* Allow Automatic Updates
  ******************************
@@ -13,9 +13,22 @@ add_filter( 'auto_update_theme', '__return_true' );
 add_filter( 'allow_major_auto_core_updates', '__return_true' );
 
 
+// add typekit to header
+
+function ms_typekit() {
+    echo "<script src='//use.typekit.net/ago4htt.js'></script>\n";
+    echo "<script>try{Typekit.load();}catch(e){}</script>\n";
+}
+// Add hook for front-end <head></head>
+add_action('wp_head', 'ms_typekit');
+
+
 function custom_register_styles() {
-					
-					if ( WP_DEBUG == true ) {
+
+
+$ms_dev_mode = 'prod'; // dev or prod
+
+					if ( $ms_dev_mode == 'dev' ) {
 					
 							// DEV: the MAIN stylesheet - uncompressed
 							wp_enqueue_style( 
@@ -30,19 +43,19 @@ function custom_register_styles() {
 							// PROD: the MAIN stylesheet - combined and minified
 							wp_enqueue_style( 
 									'main_css_style', 
-									get_stylesheet_directory_uri() . '/css/build/styles.20140629002907.css', // main.css
+									get_stylesheet_directory_uri() . '/css/build/styles.20150713162611.css', // main.css
 									false, // dependencies
 									null // version
 							); 
 					}
 					
 				
-				wp_enqueue_style( 
-						'webink_css', 
-						'http://fnt.webink.com/wfs/webink.css/?project=ED7A6E85-AB2E-40AA-B132-2DC3C951A0DD&fonts=7D81F936-7D1B-2606-5123-1CD6E6766E21:f=SoleilBasic-Book,69F436D9-ADF2-1C8F-E6D6-5E7109958578:f=EditaWeb-Regular,14BC1009-2DC5-5F1D-75D7-63418F28EEDB:f=TiinaPro-NormalItalic,6CFE4940-D138-54C5-D322-63CBD6F087D4:f=TiinaPro-Normal,D71D3845-5F0E-BA7C-CC69-863C57AA788A:f=TiinaPro-Bold,0BB6004A-0690-BB90-4E9E-359C57AB5E59:f=EditaWeb-Bold,6CFB4309-F407-866F-E4CA-E4C457364584:f=EditaWeb-Italic',
-						false,
-						null
-				); 
+//				wp_enqueue_style( 
+//						'webink_css', 
+//						'http://fnt.webink.com/wfs/webink.css/?project=ED7A6E85-AB2E-40AA-B132-2DC3C951A0DD&fonts=7D81F936-7D1B-2606-5123-1CD6E6766E21:f=SoleilBasic-Book,69F436D9-ADF2-1C8F-E6D6-5E7109958578:f=EditaWeb-Regular,14BC1009-2DC5-5F1D-75D7-63418F28EEDB:f=TiinaPro-NormalItalic,6CFE4940-D138-54C5-D322-63CBD6F087D4:f=TiinaPro-Normal,D71D3845-5F0E-BA7C-CC69-863C57AA788A:f=TiinaPro-Bold,0BB6004A-0690-BB90-4E9E-359C57AB5E59:f=EditaWeb-Bold,6CFB4309-F407-866F-E4CA-E4C457364584:f=EditaWeb-Italic',
+//						false,
+//						null
+//				); 
 				
 				
 				wp_dequeue_script( 'devicepx' ); 

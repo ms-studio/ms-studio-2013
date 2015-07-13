@@ -11,7 +11,7 @@ html,
 .wf-loading .lib-serif,
 .wf-inactive .lib-serif,
 .wf-active .lib-serif {
-	font-family: TiinaPro-Normal, Georgia, "Times New Roman", serif;
+	font-family: "chaparral-pro", TiinaPro-Normal, Georgia, "Times New Roman", serif;
 	color: #555;
 /*	-webkit-font-smoothing: auto;*/
 /*	line-height: 1.9em;*/
@@ -19,15 +19,16 @@ html,
 
 .lib-serif b, 
 .lib-serif strong {
-	font-family: TiinaPro-Bold, Georgia, "Times New Roman", serif;
-	font-weight: normal;
+	font-family: "chaparral-pro", TiinaPro-Bold, Georgia, "Times New Roman", serif;
+/*	font-weight: normal;*/
+	font-weight: 600!important;
 }
 
 .lib-serif i, 
 .lib-serif em,
 .lib-serif  blockquote {
-	font-family: TiinaPro-NormalItalic, Georgia, "Times New Roman", serif;
-	font-style: normal;
+	font-family: "chaparral-pro", TiinaPro-NormalItalic, Georgia, "Times New Roman", serif;
+/*	font-style: normal;*/
 }
 
 
@@ -37,8 +38,10 @@ html,
 .wf-active .miso-font,
 .main-content h2, .main-content h3, .main-content h4
 {
-	font-family: SoleilBasic-Book, Arial, courier, sans-serif; 
+	font-family: soleil, SoleilBasic-Book, Arial, courier, sans-serif; 
 /*	text-transform: lowercase;*/
+	font-weight: 500 !important;
+	font-style: normal !important;
 	color: #555;
 }
 
@@ -552,6 +555,7 @@ article p {
 .mainframe blockquote {
 	font-size: 110%;
 	line-height: 1.4;
+	clear: both;
 /*	font-style: italic;*/
 	color: #333;
 /*	color: #fff;*/
@@ -1062,20 +1066,20 @@ div.commentavatar img {width:40px;height:40px;}
 	}
 	
 	
-
-
 div.commenttext {
 	width:400px;
 	float:left;
 	position:relative;
 	clear:none;
 	font-size:0.9em}
+	
 div.commenttext h4 {
-	float:left;
-	font-weight:bold;
-	padding:0 0 6px 6px;
+	float: left;
+	font-weight: 600; /*bold*/
+	padding: 0 0 6px 6px;
 	margin: 0;
-	}
+}
+	
 div.commenttext div.date {
 	float:left;
 	position:relative;}
@@ -1213,6 +1217,22 @@ div.script {
 	background-color: #ffcdc0;
 	text-align: center;
 	color: #7b0a0a;
+}
+
+/* @end */
+
+/* @group Formidable */
+
+.with_frm_style label.frm_primary_label, .with_frm_style.frm_login_form label{
+	font-family: SoleilBasic-Book, Arial, courier, sans-serif;
+	font-size:100%;
+	font-weight: normal;
+	padding-bottom: 0.5em;
+}
+
+.with_frm_style .frm_submit input[type=submit], .with_frm_style .frm_submit input[type=button], .frm_form_submit_style, .with_frm_style.frm_login_form input[type=submit] {
+	font-family: SoleilBasic-Book, Arial, courier, sans-serif;
+	font-size: 120%;
 }
 
 /* @end */

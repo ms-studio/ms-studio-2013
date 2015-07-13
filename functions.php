@@ -232,7 +232,7 @@ function mytheme_comment($comment, $args, $depth) {
 
 
 
-automatic_feed_links();
+// automatic_feed_links();
 
 // Widgetized Sidebar HTML5 Markup
 if ( function_exists('register_sidebar') ) {
