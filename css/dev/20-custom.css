@@ -1268,6 +1268,36 @@ img#wpstats {
 
 /* @end */
 
+/* @group Github Gist */
+
+#main .gist pre, 
+#main .gist code,
+#main .gist .blob-code {
+	white-space: normal;
+}
+
+#main .gist .markdown-body,
+#main .lib-serif .gist strong
+{
+	font-family: soleil, SoleilBasic-Book, Arial, courier, sans-serif; 
+}
+
+#main .gist .markdown-body
+{
+	font-size: 100%;
+	line-height: 1.3;
+}
+
+#main .gist .gist-file article {
+	padding: 1em;
+}
+
+.main-content .gist h2 {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+/* @end */
 
 
 /* end of CSS Document */

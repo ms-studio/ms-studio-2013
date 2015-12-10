@@ -31,8 +31,7 @@ and (min-width : 400px) {
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 600px) {
+@media only screen and (min-width : 600px) {
 		
 		h1 { font-size: 240%; } 
 		
@@ -83,8 +82,7 @@ and (min-width : 600px) {
 
 
 /* Medium screens ----------- */
-@media only screen 
-and (min-width : 768px) {
+@media only screen and (min-width : 768px) {
 
 		#container { padding-top: 2.2em; }	
 		#top-header { position: fixed; 
@@ -136,8 +134,7 @@ and (min-width : 768px) {
 }
 
 /* Large screens ----------- */
-@media only screen 
-and (min-width : 800px) {
+@media only screen and (min-width : 800px) {
 		
 		.mainframe .main-title,		
 		.main-content h2,
@@ -158,6 +155,15 @@ and (min-width : 800px) {
 			margin-bottom: 1em;
 			width: 114%;
 		}
+		
+		/*except for: */
+		
+		.main-content .gist h2,
+		.main-content .gist h3 {
+			margin-left: 0;
+			width: auto;
+		}
+		
 		
 		#main .gallery {
 			margin-left: -7%;
