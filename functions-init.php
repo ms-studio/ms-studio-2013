@@ -1,6 +1,6 @@
 <?php
 
- // Change-Detector-XXXXXXXXXXXXXXX - for Espresso.app
+ // Change-Detector-XXXXXXXXXXXXXXXXXXX - for Espresso.app
 
 /* Allow Automatic Updates
  ******************************
@@ -43,7 +43,7 @@ $ms_dev_mode = 'prod'; // dev or prod
 							// PROD: the MAIN stylesheet - combined and minified
 							wp_enqueue_style( 
 									'main_css_style', 
-									get_stylesheet_directory_uri() . '/css/build/styles.20151210095428.css', // main.css
+									get_stylesheet_directory_uri() . '/css/build/styles.20160121114239.css', // main.css
 									false, // dependencies
 									null // version
 							); 

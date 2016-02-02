@@ -505,10 +505,22 @@ h3 a
 .wp-caption {
 	max-width: 100%;
 }
+
+.wp-caption.alignleft {
+	float: left;
+	margin-right: 10px;
+}
+
+.wp-caption.alignleft:last-of-type {
+	margin-right: 0px;
+}
+
 div.wp-caption.alignnone{
 	width: 100% !important;
 	/* override element width*/
 }
+
+
 
 .wp-caption a {
 /*	width: 100%;*/
@@ -581,6 +593,7 @@ blockquote p {
 	padding: 0.8em 0 0.2em 0;
 	border-bottom: 2px solid #666;
 	margin-bottom: 0.5em;
+	clear: left;
 }
 
 /*.gallery-item img,*/
